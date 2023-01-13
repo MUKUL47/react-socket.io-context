@@ -1,0 +1,29 @@
+{
+  "name": "socket-react-context",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/react-socket.io-context.umd.cjs",
+  "module": "./dist/react-socket.io-context.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/react-socket.io-context.js",
+    "require": "./dist/react-socket.io-context.umd.cjs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "socket.io-client": "^4.5.4"
+  }
+}
