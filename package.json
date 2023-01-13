@@ -1,7 +1,7 @@
 {
   "name": "react-socket.io-context",
   "version": "0.5.0-0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "types": "./index.d.ts",
   "dependencies": {
     "react": "^18.2.0",
@@ -10,5 +10,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MUKUL47/react-socket.io-context.git"
+  },
+  "scripts": {
+    "build": "babel lib --out-dir dist --copy-files"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6"
   }
 }
