@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import React, { FC, Context } from "react";
 import { Socket } from "socket.io-client";
 
-interface SocketContextValue<T> {
-  data: { name: string; response: T };
+interface SocketContextValue {
+  data: any;
   socket: Socket;
   sentEvent: (event: string, data: any) => void;
   subscribeEvents: (events: string[]) => void;
@@ -16,6 +16,8 @@ interface SocketContextProviderProps {
   children: React.ReactNode;
 }
 
+function getSocketContext(): Context;
+
 const SocketContextProvider: FC<SocketContextProviderProps>;
 
-export { SocketContextProvider, SocketContextValue };
+export { SocketContextProvider, SocketContextValue, getSocketContext };
