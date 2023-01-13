@@ -1,11 +1,6 @@
 {
   "name": "react-socket.io-context",
   "version": "0.3.0-0",
-  "type": "module",
-  "files": [
-    "lib",
-    "index.d.ts"
-  ],
   "main": "lib/index.js",
   "types": "./index.d.ts",
   "scripts": {
@@ -18,5 +13,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "socket.io-client": "^4.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MUKUL47/react-socket.io-context.git"
   }
 }
