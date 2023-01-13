@@ -1,5 +1,5 @@
 {
-  "name": "socket-react-context",
+  "name": "react-socket.io-context",
   "private": true,
   "version": "0.0.0",
   "type": "module",
