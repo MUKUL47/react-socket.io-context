@@ -12,12 +12,15 @@
     "url": "git+https://github.com/MUKUL47/react-socket.io-context.git"
   },
   "scripts": {
-    "build": "babel lib --out-dir dist --copy-files"
+    "build": "babel lib -d dist"
   },
   "devDependencies": {
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-react": "^7.18.6"
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.27.1"
   }
 }
