@@ -1,6 +1,6 @@
 # react-socket.io-context
 
-## Simple and easy to use react socket context wrapper with multiple instances 
+## Simple and easy to use react socket context wrapper library with multiple instances
 
 ## Usage
 
@@ -57,5 +57,4 @@ function SocketChild_TWO({}) {
   return "SocketChild_TWO";
 }
 export default App;
-
 ```
