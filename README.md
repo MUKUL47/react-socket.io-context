@@ -54,7 +54,7 @@ function SocketChild({}) {
     return () => Context?.socket?.disconnect?.(); //if you want to disconnect on unmount
   }, []);
   useEffect(() => {
-    switch (Context.name) {
+    switch (Context.data?.name || "") {
       case "CONNECT":
         /* DO SOMETHING */ break;
       case "HELLO":
