@@ -5,26 +5,24 @@ import React, {
 } from "react";
 import SocketContext from "./socket-context";
 import SocketService from "./socket-service";
-export default function SocketContextProvider({ url, socketContextId, incomingEvents , children}) {
+export default function SocketContextProvider({ url, socketContextId, incomingEvents , children, options}) {
   const [data, setData] = useState(null);
   const Context = useMemo(
     () => SocketContext.createContext(socketContextId),
     []
   );
-  const { current } = useRef(new SocketService({ url }));
+  const { current } = useRef(new SocketService({ url, options }));
   useEffect(() => {
-    return () => {
-      SocketContext.removeContext(socketContextId)
-      current.socket.disconnect()
-    };
-  }, []);
-  useMemo(() => {
     current.onEventResponse({
       cb: (e, response) => {
         setData({ name: e, response });
       },
       events: incomingEvents,
     });
+    return () => {
+      SocketContext.removeContext(socketContextId)
+      current.socket.disconnect()
+    };
   }, []);
   return (
     <Context.Provider

@@ -50,6 +50,17 @@ function SocketChild({}) {
    * unsubscribeEvents => Function (remove events on demand)
    * sendEvent => Function(eventName, data) (emit event takes 2 )
    */
+  useEffect(() => {
+    return () => Context?.socket?.disconnect?.(); //if you want to disconnect on unmount
+  }, []);
+  useEffect(() => {
+    switch (Context.name) {
+      case "CONNECT":
+        /* DO SOMETHING */ break;
+      case "HELLO":
+        /* DO SOMETHING */ break;
+    }
+  }, [Context.data]);
   return "SocketChild";
 }
 function SocketChild_TWO({}) {

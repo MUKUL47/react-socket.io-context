@@ -4,9 +4,10 @@ export default class SocketService {
   #events = new Set();
   #cb = () => {};
   constructor({
-    url
+    url,
+    options = {}
   }) {
-    this.socket = io(url);
+    this.socket = io(url, options);
   }
   onEventResponse({
     events,
